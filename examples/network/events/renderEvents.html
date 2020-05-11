@@ -1,10 +1,9 @@
 <!doctype html>
 <html>
 <head>
-  <title>Network | Basic usage</title>
+  <title>Vis Network | Events | Rendering Events</title>
 
-  <script type="text/javascript" src="../../../dist/vis-network.min.js"></script>
-  <link href="../../../dist/vis-network.min.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="../../../standalone/umd/vis-network.min.js"></script>
 
   <style type="text/css">
     #mynetwork {
@@ -61,7 +60,18 @@
     var nodePosition = network.getPositions([nodeId]);
     ctx.strokeStyle = '#A6D5F7';
     ctx.fillStyle = '#294475';
-    ctx.circle(nodePosition[nodeId].x, nodePosition[nodeId].y,50);
+
+    ctx.beginPath();
+    ctx.arc(
+      nodePosition[nodeId].x,
+      nodePosition[nodeId].y,
+      50,
+      0,
+      2 * Math.PI,
+      false
+    );
+    ctx.closePath();
+
     ctx.fill();
     ctx.stroke();
   });
@@ -71,7 +81,18 @@
     ctx.strokeStyle = '#294475';
     ctx.lineWidth = 4;
     ctx.fillStyle = '#A6D5F7';
-    ctx.circle(nodePosition[nodeId].x, nodePosition[nodeId].y,20);
+
+    ctx.beginPath();
+    ctx.arc(
+      nodePosition[nodeId].x,
+      nodePosition[nodeId].y,
+      20,
+      0,
+      2 * Math.PI,
+      false
+    );
+    ctx.closePath();
+
     ctx.fill();
     ctx.stroke();
   });

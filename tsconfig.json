@@ -1,9 +1,8 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
-        "declaration": true,
-        "declarationDir": "dist/types",
-        "declarationMap": true,
+        "declaration": false,
+        "declarationMap": false,
         "esModuleInterop": true,
         "module": "es2015",
         "moduleResolution": "node",
@@ -15,5 +14,5 @@
         "target": "esnext"
     },
     "exclude": ["node_modules", "**/__tests__/*"],
-    "include": ["lib", "test"]
+    "include": ["cypress", "lib", "test"]
 }

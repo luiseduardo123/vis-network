@@ -1,10 +1,9 @@
 <!doctype html>
 <html>
 <head>
-  <title>Network | Chosen Elements</title>
+  <title>Vis Network | Other | Chosen Elements</title>
 
-  <script type="text/javascript" src="../../../dist/vis-network.min.js"></script>
-  <link href="../../../dist/vis-network.min.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../../standalone/umd/vis-network.min.js"></script>
 
   <style type="text/css">
     #mynetwork {
@@ -57,32 +56,32 @@
 <script type="text/javascript">
 
   var changeChosenLabelColor =
-    function(ctx, values, id) {
+    function(values, id, selected, hovering) {
       values.color = "#ff0000";
     }
 
   var changeChosenLabelSize =
-    function(ctx, values, id) {
+    function(values, id, selected, hovering) {
       values.size += 1;
     }
 
   var changeChosenLabelFace =
-    function(ctx, values, id) {
+    function(values, id, selected, hovering) {
       values.face = "serif";
     }
 
   var changeChosenLabelMod =
-    function(ctx, values, id) {
+    function(values, id, selected, hovering) {
       values.mod = "bold italic";
     }
 
   var changeChosenLabelStrokeWidth =
-    function(ctx, values, id) {
+    function(values, id, selected, hovering) {
       values.strokeWidth = 5;
     }
 
   var changeChosenLabelStrokeColor =
-    function(ctx, values, id) {
+    function(values, id, selected, hovering) {
       values.strokeColor = "#00ff00";
     }
 
